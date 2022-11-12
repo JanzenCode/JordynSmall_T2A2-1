@@ -4,7 +4,7 @@ from sqlalchemy.exc import IntegrityError
 from models.address import Address, AddressSchema
 from models.users import User
 
-address_bp = Blueprint('users',__name__, url_prefix='/auth')
+address_bp = Blueprint('address',__name__, url_prefix='/auth')
 
 @address_bp.route('/register/address ')
 def auth_register():
