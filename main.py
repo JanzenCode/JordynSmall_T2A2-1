@@ -3,6 +3,7 @@ from init import db, ma, bcrypt, jwt
 from controllers.Command_Controller import db_commands
 from controllers.Auth_Controller import auth_bp
 from controllers.User_Controller import user_bp
+from controllers.Products_Controller import products_bp
 from marshmallow.exceptions import ValidationError
 import os 
 
@@ -41,6 +42,7 @@ def create_app():
     app.register_blueprint(auth_bp)
     app.register_blueprint(db_commands)
     app.register_blueprint(user_bp)
+    app.register_blueprint(products_bp)
 
     return app
 

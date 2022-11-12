@@ -14,7 +14,7 @@ class User(db.Model):
     is_admin = db.Column(db.Boolean, default=False)
 
       
-    # addresses = db.relationship('Address', back_populates='user', cascade='all, delete')
+    addresses = db.relationship('Address', back_populates='user', cascade='all, delete')
     # products = db.relationship('Product', back_populates='user', cascade='all, delete')
     # orders = db.relationship('Order', back_populates='user', cascade='all, delete')
 

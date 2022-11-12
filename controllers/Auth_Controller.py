@@ -5,9 +5,9 @@ from datetime import timedelta
 from sqlalchemy.exc import IntegrityError
 from models.users import User, UserSchema
 
-auth_bp = Blueprint('users',__name__, url_prefix='/auth')
+auth_bp = Blueprint('auth',__name__, url_prefix='/auth')
 
-@auth_bp.route('/register/' methods=['POST'])
+@auth_bp.route('/register/', methods=['POST'])
 def auth_register():
     try:
         user = User(
