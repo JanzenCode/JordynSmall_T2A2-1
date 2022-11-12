@@ -1,7 +1,7 @@
 from flask import Flask
 from init import db, ma, bcrypt, jwt
 from controllers.CommandController import db_commands
-from controllers.UserController import users_bp
+from controllers.Auth_Controller import users_bp
 from marshmallow.exceptions import ValidationError
 import os 
 

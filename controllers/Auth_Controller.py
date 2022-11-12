@@ -5,9 +5,9 @@ from datetime import timedelta
 from sqlalchemy.exc import IntegrityError
 from models.users import User, UserSchema
 
-users_bp = Blueprint('users',__name__, url_prefix='/auth')
+auth_bp = Blueprint('users',__name__, url_prefix='/auth')
 
-@users_bp.route('/register/' methods=['POST'])
+@auth_bp.route('/register/' methods=['POST'])
 def auth_register():
     try:
         user = User(
@@ -23,7 +23,7 @@ def auth_register():
     except IntegrityError:
         return {'error': 'email is already in use, please use another'}, 409
 
-@users_bp.route('/login/', methods=['POST'])
+@auth_bp.route('/login/', methods=['POST'])
 def user_login():
     stmt = db.select(User).filter_by(email=request.json['email'])
     user = db.session.scalar(stmt)
