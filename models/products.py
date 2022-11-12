@@ -13,4 +13,6 @@ class products(db.Model):
     price = db.Column(db.Integer, nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
 
-
+class ProductSchema(ma.Schema):
+    class Meta:
+        fields = 
