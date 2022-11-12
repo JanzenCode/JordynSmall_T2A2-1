@@ -9,7 +9,7 @@ class Address(db.Model):
     city = db.Column(db.String(30), nullable=False)
     state = db.Column(db.String(20), nullable=False)
     country = db.Column(db.String(30), nullable=False)
-    id = db.Column(db.Integer(), nullable=False, foreign_key=("Users.id"))
+    id = db.Column(db.Integer(), nullable=False, db.ForeignKey("Users.id"))
 
 class AddressSchema(ma.Schema):
     class Meta:
