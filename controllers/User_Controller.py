@@ -34,3 +34,16 @@ def update_account():
         user.password = bcrypt.generate_password_hash(request.json.get('password')).decode('utf-8')
     user.first_name = data.get('first_name') or user.first_name
     user.last_name = data.get('last_name') or user.last_name
+
+    db.session.commit()
+    return UserSchema(exclude=['password']).dump(user)
+
+@user_bp.route('/del_account', methods=["DELETE"])
+@jwt_required()
+def delete_account():
+    stmt = db.select(User).filter_by(id=get_jwt_identity())
+    user = db.session.scalar(stmt)
+
+    db.session.delete(user)
+    db.session.commit()
+    return {'message': f'Account "{user.email}" deleted successfully.'}
