@@ -27,7 +27,31 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 
 ## Detail any third party services that your app will use
 
+At the moment the application does not implement any third party services to operate. In later development verisons, third-party services may be implemented to fulfill orders that are placed on the client-side. 
+
 ## Describe your projects models in terms of the relationships they have with each other
+
+### User
+- The user model contains the primary data that is used across the database;
+    - A generated ID (PK)
+    - email/password for authentication and authorisation
+    - is_admin to confirm the permissions of this user (CRUD Authority)
+    - as well as other data that is sensitive to the user (shown in the ERD)
+- The User model is interrelated to the remainder of the database:
+    - Address
+    - Orders
+        - Products (when creating an order request)
+### Address
+- The address model contains information about a users location and is directly related to the user model via user_id(FK)
+    - containing sensitive information about the users location, this table is used to create a layer of security. Access is only granted by the authorised user/admin JWT Tokens
+- The address is used in assosication to the user_id when an order is requested to compile the necessary information for the order request.
+### Products
+- The products model contains the data pertaining to the available products.
+    - Users/CRUD Authority are able to filter the products by their brand, style, size, etc.
+- The product_id is used to uniquely identify the product that is ordered when an order is requested by a user or when tested by CRUD Authority.
+### Orders
+- The orders models sets up the essential data required for an order to be executed but not fulfilled. As there are no implemented payment processors (third party), users can only select their desired product to craft a draft order that remains in the cart without fulfilment. 
+- The order models utilises information from the user and address and products via requesting the relevant id parameters and compiling them.
 
 ## Discuss the database relations to be implemented in your application
 
