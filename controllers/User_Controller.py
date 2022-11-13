@@ -10,7 +10,7 @@ user_bp = Blueprint('users', __name__, url_prefix='/users')
 def list_all_users():
     stmt = db.select(User)
     users = db.session.scalars(stmt)
-    return UserSchema(many=True).dump(users)
+    return UserSchema(many=True, exclude=['password']).dump(users)
 
 @user_bp.route('/<int:id>/')
 @jwt_required()

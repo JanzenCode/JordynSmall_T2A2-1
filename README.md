@@ -17,6 +17,8 @@ However, while there are many advantages to using PostgresSQL, other RDMBS like 
 
 ## Identify and discuss the key functionalities and benefits of an ORM
 
+SQLAlchemy provides the key functionalities as an ORM. The implementation of SQLAlchemy allows for developers to have an array of libraries to access allowing the manipulation and interaction witht he database through the application to the basically seemless. The core of SQLAlchemy allows developers to create user-friendly methods for accessing the database while sanitising and maintaining a modern level of security for the information stored within. Addititional packages such as JWT can be directly imported and used in conjunction with SQLAlchemy and other packages that improve the security as well as the funcationality of the database and the codebase. This allows the developer to create clean, DRY code that is interactable and interrelateable dependent on the data that is stored. 
+
 ## Document all endpoints for your API
 
 ## An ERD for your app

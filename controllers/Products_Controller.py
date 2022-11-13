@@ -1,7 +1,7 @@
 from flask import Blueprint, request
 from init import db
 from models.products import Products, ProductSchema
-from flask_jwt_extended import jwt_required, get_jwt_identity
+from flask_jwt_extended import jwt_required
 
 products_bp = Blueprint('products', __name__, url_prefix='/products')
 
