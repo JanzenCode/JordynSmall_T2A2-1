@@ -23,7 +23,7 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 
 ## An ERD for your app
 
-[!](https://github.com/JanzenCode/JordynSmall_T2A2-1/blob/main/docs/ERD%20Diagram%20(1).png)
+![alt](https://github.com/JanzenCode/JordynSmall_T2A2-1/blob/main/docs/ERD%20Diagram%20(1).png)
 
 ## Detail any third party services that your app will use
 
