@@ -55,12 +55,25 @@ def filter_by_style(style):
     return ProductSchema(many=True).dump(products)
 
 # Sort by Price 
-@products_bp.route('/<int:price>/')
+@products_bp.route('/<int:price>/', methods=['GET'])
 @jwt_required()
 def filter_by_price(price):
     stmt = db.select(Products).filter_by(price=price)
     products = db.session.scalars(stmt)
     return ProductSchema(many=True).dump(products)
+
+# Sort By Product ID
+@products_bp.route('/<int:product_id>/', methods=['GET'])
+@jwt_required()
+def sort_by_product_id(product_id):
+    stmt = db.select(Products).filter_by(product_id=product_id)
+    products = db.session.scalars(stmt)
+    if products:
+        return ProductSchema(many=True).dump(products)
+    else:
+        return {'error': f'Product with id {id} not found'}, 404
+
+
 
 
 

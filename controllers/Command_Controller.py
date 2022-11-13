@@ -102,6 +102,15 @@ def seed_db():
             size = 'EU44',
             price = '110',
             quantity = '1'
+        ),
+        Products(
+            description = 'Sterling Silver Rings',
+            brand = 'No Brand',
+            style = 'Causal Wear',
+            category = 'Jewellery',
+            size = 'RS9',
+            price = '30',
+            quantity = '3'
         )
     ]
     db.session.add_all(products)
