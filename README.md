@@ -21,6 +21,81 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 
 ## Document all endpoints for your API
 
+### Authentication/SignUp
+- HTTP Request Verb: POST
+- Required data where applicable: Email, Password, Name, Age
+- Expected Data Response: UserSchema
+- Auth Method: N/A
+- Creates Unique JWT Token for Authentication
+### Sign-in
+- HTTP Request Verb: POST
+- Required data where applicable: Email, Password
+- Expected Data Response: JWT Token JSON
+- Auth Method: Username and Password cross-checked
+### User List
+- HTTP Request Verb: GET
+- Required data where applicable: n/a
+- Expected Data Response: UserSchema
+- Auth Method: Username and Password cross-checked
+### Sort User by ID
+- HTTP Request Verb: GET
+- Required data where applicable: user_id
+- Expected Data Response: UserSchema
+- Auth Method: Username and Password cross-checked
+### Update User
+- HTTP Request Verb: PUT/PATCH
+- Required data where applicable: Email, Password, other details in JSON
+- Expected Data Response: UserSchema
+- Auth Method: Username and Password cross-checked
+### Delete User Account
+- HTTP Request Verb: DELETE
+- Required data where applicable: Email, Password, other details in JSON
+- Expected Data Response: UserSchema
+- Auth Method: Username and Password cross-checked
+### Adding New Products
+- HTTP Request Verb: POST
+- Required data where applicable: description, brand, category, etc 
+- Expected Data Response: ProductSchema
+- Auth Method: JWT Token Required
+### List All Available Products
+- HTTP Request Verb: GET
+- Required data where applicable: n/a
+- Expected Data Response: ProductSchema
+- Auth Method: JWT Token Required
+### Sort By Category
+- HTTP Request Verb: GET
+- Required data where applicable: category
+- Expected Data Response: ProductSchema
+- Auth Method: JWT Token Required
+### Sort By Brand
+- HTTP Request Verb: GET
+- Required data where applicable: brand
+- Expected Data Response: ProductSchema
+- Auth Method: JWT Token Required
+### Sort By Style
+- HTTP Request Verb: GET
+- Required data where applicable: style
+- Expected Data Response: ProductSchema
+- Auth Method: JWT Token Required
+### Sort By Price
+- HTTP Request Verb: GET
+- Required data where applicable: price
+- Expected Data Response: ProductSchema
+- Auth Method: JWT Token Required
+### Sort By Product ID
+- HTTP Request Verb: GET
+- Required data where applicable: product_id
+- Expected Data Response: ProductSchema
+- Auth Method: JWT Token Required
+
+### New Order
+- HTTP Request Verb: POST
+- Required data where applicable: user_id, product_id, quantity
+- Expected Data Response: OrderSchema
+- Auth Method: JWT Token Required
+
+
+
 ## An ERD for your app
 
 ![alt](https://github.com/JanzenCode/JordynSmall_T2A2-1/blob/main/docs/ERD%20Diagram%20(1).png)

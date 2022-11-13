@@ -1,8 +1,10 @@
 from flask import Blueprint
 from init import db, bcrypt
+from datetime import date
 from models.users import User
 from models.products import Products
 from models.address import Address
+from models.orders import Order
 
 db_commands = Blueprint('db', __name__)
 
@@ -115,4 +117,15 @@ def seed_db():
     ]
     db.session.add_all(products)
     db.session.commit()
+    
+    orders = [
+        Order(
+        quantity = '1',
+        subtotal = '99',
+        user_id = users[1]
+    )
+    ]
+    db.session.add_all(orders)
+    db.session.commit()
+
     print('Tables Seeded')
