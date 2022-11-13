@@ -55,9 +55,24 @@ At the moment the application does not implement any third party services to ope
 
 ## Discuss the database relations to be implemented in your application
 
+Relationsip 1: The User Model is classified as a "one-to-many relationship" to the Order Model. This means that the multiple orders with different products. But only one Order can have one User this is because the order model contains a user_id (FK) linked both models together.
+
+Relationship 2: The Address Model is classified as a "one-to-one relationship" to the User Model. This is because of the user_id(FK) that links the address to that specific user, for example:
+- if the user has an user_id of "1" then,
+- the address contents that also has a user_id of "1" will be directly associated with that user.
+This means that the address with the specified user_id will only link to that user. Creating a one-to-one relationship between the User Model and the Address Model, the user in this API cannot have multiple addresses at the moment and will have update their address if the user changes their address.
+
 ## Describe the way tasks are allocated and tracked in your project
 
-Trello an Online Management Software System was used to manage the projects development,
+Trello an Online Management Software System was used to manage the projects development. In trello I created a board that broke down the requirements of each module of the product from: 
+- models,
+- controllers,
+- commands,
+- env/requirements,
+- ERD Diagram;
+- and any additional information or final udpates
+
+The modular tasks allow for sectioned completion of each module and then are tracked by the progress and debugging of each controllers functions related to the model and/or other task. 
 
 [Trello Project Management](https://trello.com/invite/b/fI6qSSzC/ATTI302946e3bbe390b68f620b98324ea095D89C4694/t2a2-project-management)
 
