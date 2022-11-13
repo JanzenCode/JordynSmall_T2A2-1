@@ -31,7 +31,8 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 
 ## Describe the way tasks are allocated and tracked in your project
 
-Insturctions for Database Step up:
+
+### Insturctions for Database Step up:
 
 Inside your terminal run:
 ```
@@ -59,4 +60,9 @@ flask db drop
 ```
 flask db create && flask db seed
 ```
+
+### API Py-Package Requirements:
+
+[requirements](https://github.com/JanzenCode/JordynSmall_T2A2-1/blob/main/requirements.txt)
+
 
