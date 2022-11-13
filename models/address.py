@@ -6,17 +6,13 @@ class Address(db.Model):
     __tablename__ = 'address'
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
-    street_number = db.Column(db.String, nullable=False)
+    street_number = db.Column(db.Integer, nullable=False)
     street_name = db.Column(db.String, nullable=False)
     suburb = db.Column(db.String, nullable=False)
-    postcode = db.Column(db.String, nullable=False)
+    postcode = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("Users.id"), nullable=False)
 
     user = db.relationship('User', back_populates='addresses')
-
-# class AddressSchema(ma.Schema):
-#     class Meta:
-#         fields = ('address', 'city', 'state', 'country', 'id')
 
 class AddressSchema(ma.Schema):
     user = fields.Nested('UserSchema', only=['first_name', 'last_name'])

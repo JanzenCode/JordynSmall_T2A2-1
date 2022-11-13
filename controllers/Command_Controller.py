@@ -22,17 +22,25 @@ def drop_db():
 def seed_db():
     users = [
         User(
-            email='vintagedev@spam.com',
+            email='vintagestockhand@spam.com',
             password=bcrypt.generate_password_hash('123').decode('utf-8'),
             first_name='Adam',
             last_name='User',
-            is_admin=True
+            is_admin=True,
+            street_number = '69',
+            street_name = 'Vintage Way',
+            suburb = 'Recycler',
+            postcode = '4101'
         ),
         User(
             first_name='Ron',
             last_name='Swanson',
             email='swanson@spam.com',
-            password=bcrypt.generate_password_hash('12345').decode('utf-8')
+            password=bcrypt.generate_password_hash('12345').decode('utf-8'),
+            street_number = '1',
+            street_name = 'Swanson Rd',
+            suburb = 'Pawee',
+            postcode = '5011'
         )
     ]
 

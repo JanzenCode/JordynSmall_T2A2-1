@@ -55,12 +55,12 @@ def filter_by_style(style):
     return ProductSchema(many=True).dump(products)
 
 # Sort by Price 
-# @products_bp.route('/<integer:price>/')
-# @jwt_required()
-# def filter_by_price(price):
-#     stmt = db.select(Products).filter_by(price=price)
-#     products = db.session.scalars(stmt)
-#     return ProductSchema(many=True).dump(products)
+@products_bp.route('/<int:price>/')
+@jwt_required()
+def filter_by_price(price):
+    stmt = db.select(Products).filter_by(price=price)
+    products = db.session.scalars(stmt)
+    return ProductSchema(many=True).dump(products)
 
 
 

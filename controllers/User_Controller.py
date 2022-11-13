@@ -10,7 +10,7 @@ user_bp = Blueprint('users', __name__, url_prefix='/users')
 def list_all_users():
     stmt = db.select(User)
     users = db.session.scalars(stmt)
-    return UserSchema(many=True, exclude=['password', 'phone_number']).dump(users)
+    return UserSchema(many=True).dump(users)
 
 @user_bp.route('/<int:id>/')
 @jwt_required()
@@ -18,7 +18,7 @@ def get_one_user(id):
     stmt = db.select(User).filter_by(id=id)
     user = db.session.scalar(stmt)
     if user:
-        return UserSchema(exclude=['password', 'phone_number']).dump(user)
+        return UserSchema(exclude=['password']).dump(user)
     else:
         return {'error': f'User with id {id} not found.'}, 404
 

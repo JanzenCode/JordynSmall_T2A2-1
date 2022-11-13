@@ -11,6 +11,10 @@ class User(db.Model):
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
     age = db.Column(db.Integer)
+    street_number = db.Column(db.Integer, nullable=False)
+    street_name = db.Column(db.String, nullable=False)
+    suburb = db.Column(db.String, nullable=False)
+    postcode = db.Column(db.Integer, nullable=False)
     is_admin = db.Column(db.Boolean, default=False)
 
       
@@ -28,7 +32,7 @@ class UserSchema(ma.Schema):
     last_name = fields.String()
 
     class Meta:
-        fields = ('id', 'email', 'password' 'first_name', 'last_name', 'age', 'is_admin')
+        fields = ('id', 'email', 'password', 'first_name', 'last_name', 'age', 'is_admin')
 
 
 
