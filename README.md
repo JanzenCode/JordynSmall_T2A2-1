@@ -23,6 +23,8 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 
 ## An ERD for your app
 
+[![ERD for VintageAPI]](https://github.com/JanzenCode/JordynSmall_T2A2-1/blob/main/docs/ERD%20Diagram%20(1).png?raw=true)
+
 ## Detail any third party services that your app will use
 
 ## Describe your projects models in terms of the relationships they have with each other
