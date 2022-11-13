@@ -63,6 +63,6 @@ flask db create && flask db seed
 
 ### API Py-Package Requirements:
 
-[requirements](https://github.com/JanzenCode/JordynSmall_T2A2-1/blob/main/requirements.txt)
+[API Requirements](https://github.com/JanzenCode/JordynSmall_T2A2-1/blob/main/requirements.txt)
 
 
