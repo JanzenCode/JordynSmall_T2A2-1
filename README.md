@@ -101,7 +101,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 ### Install the Requirements
-#### Download the requirements.txt
+#### Download the requirements.txt found in the Repository (linked below)
 ``` 
 pip install -r requirements.txt
 ```
