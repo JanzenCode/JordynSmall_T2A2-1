@@ -74,7 +74,7 @@ Trello an Online Management Software System was used to manage the projects deve
 
 The modular tasks allow for sectioned completion of each module and then are tracked by the progress and debugging of each controllers functions related to the model and/or other task. 
 
-[Trello Project Management](https://trello.com/invite/b/fI6qSSzC/ATTI302946e3bbe390b68f620b98324ea095D89C4694/t2a2-project-management)
+[Click for Trello Project Management](https://trello.com/invite/b/fI6qSSzC/ATTI302946e3bbe390b68f620b98324ea095D89C4694/t2a2-project-management)
 
 
 ### Insturctions for Database Step up:
