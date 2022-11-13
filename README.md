@@ -31,3 +31,14 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 
 ## Describe the way tasks are allocated and tracked in your project
 
+Insturctions for Database Step up:
+
+```
+CREATE DATABASE vintageapi;
+```
+```
+CREATE USER vintagedev WITH PASSWORD '123';
+```
+```
+GRANT ALL PRIVILEGES ON DATABASE vintageapi TO vintagedev;
+```
