@@ -48,7 +48,7 @@ GRANT ALL PRIVILEGES ON DATABASE vintageapi TO vintagedev;
 ```
 \q
 ```
-Flask CLI Commands Shortcut:
+### Flask CLI Commands Shortcut:
 ```
 flask db drop && flask db create && flask db seed
 ```
