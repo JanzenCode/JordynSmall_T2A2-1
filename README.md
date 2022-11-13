@@ -1,5 +1,5 @@
 # Vintage e-Commerce Shop API
-
+[GitHub Repo Link](https://github.com/JanzenCode/JordynSmall_T2A2-1)
 ## Identification of the problem you are trying to solve by building this particular app.
 
 This API is designed to handle the essential functions of a simple e-Commerece web app. The API controls the communication between consumers and the store allowing consumers to filter, sort and browse the list of products that are available as per stock levels. The Managers, Admins or Stockhands have full CRUD control and able able to update, modify, delete or create new products, add additional staff users.
