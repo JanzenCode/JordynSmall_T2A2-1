@@ -33,6 +33,10 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 
 Insturctions for Database Step up:
 
+- Inside your terminal run:
+```
+psql -U Postgres 
+```
 ```
 CREATE DATABASE vintageapi;
 ```
