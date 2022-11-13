@@ -57,6 +57,10 @@ At the moment the application does not implement any third party services to ope
 
 ## Describe the way tasks are allocated and tracked in your project
 
+Trello an Online Management Software System was used to manage the projects development,
+
+[Trello Project Management](https://trello.com/invite/b/fI6qSSzC/ATTI302946e3bbe390b68f620b98324ea095D89C4694/t2a2-project-management)
+
 
 ### Insturctions for Database Step up:
 ```
