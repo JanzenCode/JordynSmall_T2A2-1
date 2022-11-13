@@ -33,7 +33,7 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 
 Insturctions for Database Step up:
 
-- Inside your terminal run:
+Inside your terminal run:
 ```
 psql -U Postgres 
 ```
@@ -46,3 +46,17 @@ CREATE USER vintagedev WITH PASSWORD '123';
 ```
 GRANT ALL PRIVILEGES ON DATABASE vintageapi TO vintagedev;
 ```
+```
+\q
+```
+Flask CLI Commands Shortcut:
+```
+flask db drop && flask db create && flask db seed
+```
+```
+flask db drop
+```
+```
+flask db create && flask db seed
+```
+
