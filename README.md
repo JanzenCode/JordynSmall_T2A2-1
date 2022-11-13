@@ -100,6 +100,11 @@ python3 -m venv .venv
 ```
 source .venv/bin/activate
 ```
+### Install the Requirements
+#### Download the requirements.txt
+``` 
+pip install -r requirements.txt
+```
 ### Flask CLI Commands Shortcut:
 ```
 flask db drop && flask db create && flask db seed
