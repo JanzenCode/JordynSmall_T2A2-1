@@ -47,4 +47,3 @@ def create_app():
     app.register_blueprint(address_bp)
 
     return app
-

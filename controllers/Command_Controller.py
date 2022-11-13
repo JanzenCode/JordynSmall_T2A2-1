@@ -1,6 +1,5 @@
 from flask import Blueprint
 from init import db, bcrypt
-from datetime import date
 from models.users import User
 from models.products import Products
 from models.address import Address
@@ -75,6 +74,33 @@ def seed_db():
             category = 'Hoodies',
             size = 'Large',
             price = '99',
+            quantity = '1'
+        ),
+        Products(
+            description = 'White T-Shirt',
+            brand = 'Nautica',
+            style = 'Beach Style',
+            category = 'Shirts',
+            size = 'Medium',
+            price = '50',
+            quantity = '1'
+        ),
+        Products(
+            description = 'Canvas Tote Bag',
+            brand = 'No Brand',
+            style = 'Casual Wear',
+            category = 'Accessories',
+            size = 'XL',
+            price = '20',
+            quantity = '1'
+        ),
+        Products(
+            description = 'Air Force One',
+            brand = 'Nike',
+            style = 'Street Wear',
+            category = 'Shoes',
+            size = 'EU44',
+            price = '110',
             quantity = '1'
         )
     ]
