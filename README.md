@@ -87,7 +87,6 @@ SQLAlchemy provides the key functionalities as an ORM. The implementation of SQL
 - Required data where applicable: product_id
 - Expected Data Response: ProductSchema
 - Auth Method: JWT Token Required
-
 ### New Order
 - HTTP Request Verb: POST
 - Required data where applicable: user_id, product_id, quantity

@@ -19,8 +19,8 @@ class User(db.Model):
 
       
     addresses = db.relationship('Address', back_populates='user', cascade='all, delete')
-    # products = db.relationship('Product', back_populates='user', cascade='all, delete')
-    # orders = db.relationship('Order', back_populates='user', cascade='all, delete')
+    # order_placed = db.relationship('Order', back_populates='user', cascade='all, delete')
+    
 
 class UserSchema(ma.Schema):
     email = fields.Email(required=True)
