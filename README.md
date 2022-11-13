@@ -93,6 +93,13 @@ GRANT ALL PRIVILEGES ON DATABASE vintageapi TO vintagedev;
 ```
 \q
 ```
+### Creating the Venv & Activation
+``` 
+python3 -m venv .venv
+```
+```
+source .venv/bin/activate
+```
 ### Flask CLI Commands Shortcut:
 ```
 flask db drop && flask db create && flask db seed
